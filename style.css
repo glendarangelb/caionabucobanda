@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(22, 68, 14, 0.75), transparent 34%),
+    radial-gradient(circle at bottom, rgba(46, 95, 35, 0.28), transparent 38%),
+    linear-gradient(180deg, #061006 0%, #0b0d0a 48%, #030503 100%);
+  color: #f6f1e8;
+  overflow-x: hidden;
+}
+
+.page {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 38px 10px 28px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.avatar {
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #16440e, #d8c7a3);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  background: #111;
+}
+
+.profile h1 {
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+  color: #fff8ec;
+}
+
+.profile p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #d8d0c3;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.contact-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.contact-btn {
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: 0.25s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.contact-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.whatsapp {
+  background: #16440e;
+  color: #fff8ec;
+  border: 1px solid rgba(216, 199, 163, 0.28);
+}
+
+.email {
+  background: #f1e6d2;
+  color: #10130f;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+}
+
+/* BANNERS */
+
+.banner-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.banner-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  line-height: 0;
+  overflow: visible;
+}
+
+.banner-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  transition: 0.25s ease;
+}
+
+.banner-card:hover img {
+  transform: scale(1.015);
+}
+
+/* DESTAQUE DO SPOTIFY */
+
+.banner-spotify {
+  animation: spotifyFloat 2.8s ease-in-out infinite;
+}
+
+.banner-spotify img {
+  filter: drop-shadow(0 0 12px rgba(166, 255, 94, 0.28));
+}
+
+@keyframes spotifyFloat {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 0 rgba(166, 255, 94, 0));
+  }
+
+  50% {
+    transform: translateY(-4px);
+    filter: drop-shadow(0 0 16px rgba(166, 255, 94, 0.35));
+  }
+
+  100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 0 rgba(166, 255, 94, 0));
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 28px;
+  color: #b8ad9b;
+  font-size: 0.8rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .page {
+    max-width: 100%;
+    padding: 28px 10px 24px;
+  }
+
+  .profile {
+    margin-bottom: 22px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 14px;
+  }
+
+  .profile h1 {
+    font-size: 1.55rem;
+    margin-bottom: 8px;
+  }
+
+  .profile p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    max-width: 330px;
+  }
+
+  .contact-buttons {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 22px;
+    padding: 0 10px;
+  }
+
+  .contact-btn {
+    padding: 13px 16px;
+    font-size: 0.92rem;
+  }
+
+  .contact-btn svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .banner-links {
+    gap: 25px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .banner-card {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .banner-card img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .banner-spotify img {
+    transform: scale(1.04);
+  }
+
+  .banner-card:hover img {
+    transform: scale(1.04);
+  }
+
+  footer {
+    margin-top: 24px;
+    font-size: 0.78rem;
+  }
+}
+
+/* CELULARES MUITO PEQUENOS */
+
+@media (max-width: 360px) {
+  .page {
+    padding: 26px 10px 22px;
+  }
+
+  .avatar {
+    width: 88px;
+    height: 88px;
+  }
+
+  .profile h1 {
+    font-size: 1.45rem;
+  }
+
+  .profile p {
+    font-size: 0.86rem;
+  }
+
+  .contact-buttons {
+    gap: 9px;
+    padding: 0 8px;
+  }
+
+  .contact-btn {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+
+  .banner-links {
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .banner-spotify img {
+    transform: scale(1.03);
+  }
+
+  .banner-card:hover img {
+    transform: scale(1.03);
+  }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-spotify {
+    animation: none;
+  }
+
+  .banner-card img,
+  .contact-btn {
+    transition: none;
+  }
+}
